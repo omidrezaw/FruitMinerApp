@@ -2,15 +2,14 @@ name: Build APK with Buildozer
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Clone repo
         uses: actions/checkout@v3
 
       - name: Set up Python
@@ -35,4 +34,3 @@ jobs:
           name: FruitMinerApp-APK
           path: |
             bin/**/*.apk
-            /bin//*.apk
