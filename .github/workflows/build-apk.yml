@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Set up Python
@@ -33,4 +33,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: FruitMinerApp-APK
-          path: bin/*.apk
+          path: |
+            bin/**/*.apk
+            /bin//*.apk
